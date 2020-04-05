@@ -1,11 +1,11 @@
 // Write a function  that accepts an array and puts it into a variable, then log that variable to the console
 
-const numArr = ['A', 'B', 'C', 'D']
 
 function myFunc(arr) {
-  console.log(arr);
+  const numArr = arr;
+  console.log(numArr);
 }
-myFunc(numArr);
+myFunc(['A', 'B', 'C', 'D']);
 
 
 // Description: Write an object that has a method which can over write the parameters of that object by passing an argument to it, 
