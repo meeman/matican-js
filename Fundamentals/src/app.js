@@ -1,10 +1,11 @@
 // Write a function  that accepts an array and puts it into a variable, then log that variable to the console
 
-function myFunc() {
-  const numArr = [1, 2, 3, 4]
-  console.log(numArr);
+const numArr = ['A', 'B', 'C', 'D']
+
+function myFunc(arr) {
+  console.log(arr);
 }
-myFunc();
+myFunc(numArr);
 
 
 // Description: Write an object that has a method which can over write the parameters of that object by passing an argument to it, 
@@ -16,10 +17,13 @@ const products = {
   name: 'BMW',
   color: 'black',
   hasSunroof: true,
-  horsePower: (function (hp) {
-    return hp
-  })(300)
+  horsePower: null,
+  HPFunc: function(hp) {
+    this.horsePower = hp
+  }
 }
+
+products.HPFunc(300)
 
 console.log(products);
 
