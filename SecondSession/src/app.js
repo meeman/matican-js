@@ -28,14 +28,26 @@ switch (new Date().getDay()) {
 
 const funcOne = (goal) => {
   const myArr = ['A', 'B', 'C', 'D', 'E', 'F', 'G']
-  const myGoal = myArr.some(item => item === goal)
-    if (myGoal){
-      console.log('Wow found')
-    } else {
-      console.log('Oops not found')
+  // const myGoal = myArr.some(item => item === goal)
+  // if (myGoal){
+  //   console.log('Wow found')
+  // } else {
+  //   console.log('Oops not found')
+  // }
+  let found = false
+  for(let i = 0; i < myArr.length; i++ ) {
+    if (myArr[i] === goal) {
+      found = true
     }
+  }
+  if (found){
+     console.log('Wow found');
+  } 
+  else {
+     console.log('Oops not found')
+  }
 }
-funcOne('G')
+funcOne("F")
 
 
 // Task Three
@@ -50,11 +62,13 @@ const funcTwo = () => {
     weight: '90kg'
   }
 
-  // const items = Object.entries(myObj)
-  // console.log(items)
-  for (let [key, value] of Object.entries(myObj)) {
-    console.log(`${key}: ${value}`)
+  for(let values of Object.values(myObj)){
+    console.log(values)
   }
+  
+  // for (let [key, value] of Object.entries(myObj)) {
+  //   console.log(`${key}: ${value}`)
+  // }
 }
 funcTwo()
 
